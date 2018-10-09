@@ -1,0 +1,7 @@
+
+
+class Playlist <ApplicationRecord
+
+  
+
+end
