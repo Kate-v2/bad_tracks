@@ -9,4 +9,7 @@ class Song < ApplicationRecord
   # Note the s here is not present in the test (belong_to)
   belongs_to :artist
 
+  has_many :playlist_songs
+  has_many :playlists, through: :playlist_songs
+
 end
