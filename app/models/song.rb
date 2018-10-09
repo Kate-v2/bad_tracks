@@ -6,6 +6,7 @@ class Song < ApplicationRecord
   # IF you open this file -- you can make methods that can be passed (bc of inheritance)
   # that will be passed to ALL of your MODELS
 
-  belong_to :artist
+  # Note the s here is not present in the test (belong_to)
+  belongs_to :artist
 
 end
