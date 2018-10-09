@@ -6,5 +6,6 @@ class Artist < ApplicationRecord
   # in the test, it does not have an s - validate
   validates_presence_of :name
 
+  has_many :songs
 
 end
