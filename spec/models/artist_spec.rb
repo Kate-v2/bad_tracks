@@ -5,8 +5,8 @@ require 'rails_helper'
 describe Artist, type: :model do
 
   describe 'Validations' do
-    # via shoulda-matcher gem
-    it { should validate_presence_of(:name)}
+    # Note here validate has no S, but in the model we use validateS
+    it { should validate_presence_of(:name)} # ( via shoulda-matcher gem )
   end
 
 end
