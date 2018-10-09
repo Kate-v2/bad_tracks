@@ -2,6 +2,6 @@
 
 class PlaylistSong < ApplicationRecord
 
-
+  
 
 end
