@@ -3,8 +3,8 @@ require "rails_helper"
 describe PlaylistSong, type: :model do
 
   describe 'Relationships' do
-    it { should have_many(:song) }
-    it { should have_many(:playlist) }
+    it { should belong_to(:song) }
+    it { should belong_to(:playlist) }
   end
 
 
