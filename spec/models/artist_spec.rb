@@ -9,4 +9,8 @@ describe Artist, type: :model do
     it { should validate_presence_of(:name)} # ( via shoulda-matcher gem )
   end
 
+  describe 'Relationships' do
+    it { should have_many(:songs) }
+  end
+
 end
