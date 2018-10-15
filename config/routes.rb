@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :artists, only: [:new, :create, :show] do
     # Nested Resource
     resources :songs, only: [:new]
+    # cannot make a song unless you have an artist
   end
 
   resources :songs, only: [:index]
