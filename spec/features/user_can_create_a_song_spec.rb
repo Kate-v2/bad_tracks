@@ -7,7 +7,7 @@ describe 'user can create a song' do
   it 'through an artist' do
     artist = Artist.create(name: "Artist 1")
 
-    visit new_artist_songs_path(artist)
+    visit new_artist_song_path(artist)
 
     title = "Song 1"
     length = 100
