@@ -3,9 +3,15 @@
     - 1st should be leading path
     - 2nd should be following path
     /artists/:artist_id/songs/new
+
+    when we post this, it's posted to:
+    /artists/:artist_id/songs
+
+    - we now have :artist_id (via rails) and it's not functional with :id anymore
+    - :id would now refer to the id of a song (for a song show page) because it comes last in the URL
  -->
 <%= form_for [@artist, @song] do |f| %>
 
-  
+
 
 <% end %>
