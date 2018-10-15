@@ -20,8 +20,6 @@ describe 'user can create a song' do
     expect(page).to have_content(title)
     expect(page).to have_content(length)
     expect(page).to have_content(artist.name)
-
-
   end
 
 
