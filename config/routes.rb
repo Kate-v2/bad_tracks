@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   # the method name is index -- from the file songs_controller.rb
   # get '/songs', to: 'songs#index'
-  resources :songs
+  resources :songs, only: [:index]
+
+  resources :artists, only: [:new]
 
 end
