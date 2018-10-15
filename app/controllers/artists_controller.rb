@@ -15,6 +15,7 @@ class ArtistsController < ApplicationController
 
   private
 
+  # this improves security, by only allowing what we expect to pass
   def artist_params
     params.require(:artist).permit(:name)
   end
