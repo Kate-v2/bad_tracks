@@ -5,6 +5,9 @@ describe 'User can create an artist' do
 
   it 'when visiting /artists/new' do
     visit '/artists/new'
+
+    save_and_open_page
+
     artist_name = "Nickleback"
 
     fill_in('artist[name]', with: artist_name)
