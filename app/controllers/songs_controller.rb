@@ -21,8 +21,8 @@ class SongsController < ApplicationController
 
   private
 
-  def verify_params
-    params.require(:song).permit(:title, :length, :)
-  end
+  # def verify_params
+  #   params.require(:song).permit(:title, :length)
+  # end
 
 end
