@@ -15,6 +15,7 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
     @songs  = @artist.songs
     # cookies[:secret] = "It's a secret to everybody"
+    session[:secret] = "This time for real, though."
   end
 
   private
