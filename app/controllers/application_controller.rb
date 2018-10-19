@@ -10,9 +10,8 @@ class ApplicationController < ActionController::Base
 
   def set_breadcrumb
     # what it current or new if it doesn't exist yet
-    @breadcrumbs ||= []
-    @breadcrumbs.push(request.url)
-    session[:breadcrumbs] = @breadcrumbs
+    @breadcrumbs ||= session[:breadcrumbs]
+    @breadcrumbs.push(request.path_info)
   end
 
 
