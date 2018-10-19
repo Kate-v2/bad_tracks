@@ -4,8 +4,16 @@ class ApplicationController < ActionController::Base
 
   before_action :set_breadcrumb
 
-  def set_breadcrumb
 
+
+
+
+  def set_breadcrumb
+    # what it current or new if it doesn't exist yet
+    @breadcrumbs ||= []
+    @breadcrumbs.push(request.url)
+    session[:breadcrumbs] = @breadcrumbs
   end
+
 
 end
