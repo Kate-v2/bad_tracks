@@ -10,6 +10,7 @@ describe 'categories index page' do
 
       username = "Admin1"
       pw       = "Password1"
+      # role     = :admin     # this works too because of enum
       role     = 1
       admin = User.create(username: username, password: pw, role: role)
       # Login mock
