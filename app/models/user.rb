@@ -20,4 +20,10 @@ class User < ApplicationRecord
   # registered users, admins, merchant <<-- project
   # %w list of words separated by whitespace
 
+
+  # we can use an enumerator to create like a psudo table
+  # we don't really need a new table for such simple data, so you can use
+  # this enumerable to correlate an 'id' or int value to a word (or something)
+  # enum creates this: 0 = default, 1 = admin
+
 end
