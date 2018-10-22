@@ -8,7 +8,12 @@ class UsersController < ApplicationController
   def create
     # @user = User.create(user_params)
     @user = User.new(user_params)
-    @user.save ? redirect_to user_path(@user) : render :new
+    if @user.save
+      redirect_to user_path(@user)
+      session[:user_id] = @user.id
+    else
+      render :new
+    end
   end
 
   def show
