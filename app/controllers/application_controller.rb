@@ -13,10 +13,16 @@ class ApplicationController < ActionController::Base
 
   # this lets the view access the helper method
   helper_method :current_user
+
   def current_user
     @current_user_lookup ||= User.find(session[:user_id]) if session[:user_id]
     # this can't be a local variable because it would reset each time it was called
     # this as a instance variable will persist across multiple requests
+  end
+
+  def current_admin?
+    # both have a current user and it's an admin
+    current_user && current_user.admin?
   end
 
 
