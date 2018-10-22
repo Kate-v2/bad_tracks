@@ -15,7 +15,8 @@
 
 Rails.application.routes.draw do
 
-  root to: 'artist#index'
+  # root to: 'artist#index'
+  root "welcome#index"
 
   # you can make urls shallow via:
   # resources :artists, only: [:new, :create, :show], shallow: true do

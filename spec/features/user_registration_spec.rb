@@ -5,8 +5,8 @@ describe 'user registration' do
 
   it 'anonymous visitor' do
     # Important to test: -anonymous user, -registered user, -admin user, etc..
-    # visit '/'
-    visit root_path
+    visit '/'
+    # visit root_path
 
     click_on 'Sign up to be a new user'
 
