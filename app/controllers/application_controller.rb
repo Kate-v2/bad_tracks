@@ -12,6 +12,8 @@ class ApplicationController < ActionController::Base
 
 
   # this lets the view access the helper method
+  # this is not important for other controllers to
+  # have access to these methods (just 'outside' to the view)
   helper_method :current_user
 
   def current_user

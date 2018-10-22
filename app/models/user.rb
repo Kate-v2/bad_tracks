@@ -11,6 +11,9 @@ class User < ApplicationRecord
   # via bcrypt gem -- method mixin
   has_secure_password
 
+  # these all work
+  # enum role: ['default', 'admin']
+  # enum role: [:default, :admin]
   enum role: %w(default admin)
   # enum role: %w(default merchant admin)  <<---- little shop project, can do this
   # default is the generic for the lowest role you can have
