@@ -14,8 +14,8 @@ describe 'user registration' do
 
     expect(current_path).to eq(new_user_path)
     # :user_username => "user[:username]"
-    fill_in :user_username, username
-    fill_in :user_password, "password1"
+    fill_in :user_username, with: username
+    fill_in :user_password, with: "password1"
     click_on 'Create User'
     expect(page).to have_content("Welcome #{username}")
 
