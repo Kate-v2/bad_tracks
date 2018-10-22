@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   # A sessions is not a resource
   # logins and logouts will be manually written like this
   get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
 
   # you can make urls shallow via:
   # resources :artists, only: [:new, :create, :show], shallow: true do
