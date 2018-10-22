@@ -17,6 +17,13 @@ class Admin::CategoriesController < ApplicationController
   def require_admin
     # are you logged in, if you're logged in are you an admin, do you have permission to see this
     render file: "/public/404" unless current_admin?
+    # find that 404 page and render it (not redirecting so that a bad actor
+    # won't know the difference and won't know they hit something they can try to hack
+    # -- something being a valid)
+
+    # other styling like nav bar and other rendered html pieces will
+    # show with the 404 inside it (which indicated to a bad actor that they hit
+    # something they can try to hack )
     end
   end
 

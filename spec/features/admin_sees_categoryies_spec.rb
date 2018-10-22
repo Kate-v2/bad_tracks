@@ -13,8 +13,11 @@ describe 'categories index page' do
       role     = 1
       admin = User.create(username: username, password: pw, role: role)
       # Login mock
-      allow_any_instance_of(ApplicationController).to
-        receive(:current_user).and_return(admin)
+      # this works too with the slash
+      # allow_any_instance_of(ApplicationController).to \
+      #   receive(:current_user).and_return(admin)
+      allow_any_instance_of(ApplicationController)
+        .to receive(:current_user).and_return(admin)
       # don't look up the object, just always return admin
       # ~ likely part of rspec
 
