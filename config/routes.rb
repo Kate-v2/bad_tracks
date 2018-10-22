@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   # root to: 'artist#index'
   root "welcome#index"
 
+  # A sessions is not a resource
+  # logins and logouts will be manually written like this
+  get '/login', to: 'sessions#new'
+
   # you can make urls shallow via:
   # resources :artists, only: [:new, :create, :show], shallow: true do
   resources :artists, only: [:new, :create, :show] do
