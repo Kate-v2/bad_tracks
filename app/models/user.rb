@@ -8,5 +8,7 @@ class User < ApplicationRecord
   validate :username, presence: true, uniqueness: true
 
 
+  # via bcrypt gem -- method mixin
+  has_secure_password
 
 end
