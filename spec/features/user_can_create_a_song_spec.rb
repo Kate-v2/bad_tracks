@@ -5,7 +5,9 @@ require "rails_helper"
 describe 'user can create a song' do
 
   it 'through an artist' do
-    artist = Artist.create(name: "Artist 1")
+    # artist = Artist.create(name: "Artist 1")
+    # NOW (via FactoryBot) we can just use this line
+    artist = create(:artist)
 
     visit new_artist_song_path(artist)
 
