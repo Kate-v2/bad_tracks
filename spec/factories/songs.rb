@@ -8,7 +8,7 @@ FactoryBot.define do
     sequence(:lenght) { |n| 10*n }
     # play_count { 100 }
     sequence(:play_count) { |n| 100*n }
-    artist   # this creates a reference
+    artist   # this creates a reference via Artist's factorybot
   end
 
 end

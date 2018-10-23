@@ -15,7 +15,10 @@ describe 'user index' do
     # These create an artist
     # song_1 = create(:song)
     # song_2 = create(:song)
-    songs_1, song_2 = create_list(:song, 2)
+    # songs_1, song_2 = create_list(:song, 2)
+    artist_1, artist_2 = create_list(:artist, 2)
+    song_1 = create(:song, title: "override", artist: artist_1)
+    song_2, song_3 = create_list(:song, 2, artist: artist_2)
 
 
     visit '/songs'
