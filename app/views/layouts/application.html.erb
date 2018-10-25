@@ -9,12 +9,6 @@
   </head>
 
   <body>
-    <% if @breadcrumbs %>
-      <p>Last pages visited</p>
-      <% @breadcrumbs.each do |b| %>
-        <%= link_to b, b %>
-      <%end%>
-    <% end %>
     <%= yield %>
   </body>
 </html>

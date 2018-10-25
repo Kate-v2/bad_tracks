@@ -1,18 +1,5 @@
-
 <%= form_for @artist do |f| %>
-<!-- by default it fills in additional attributes like:
-    < % = form_for Artist.new as:artist, url:artists_path, html:{class:"new_artist", id:"new_artist"} % >
-
-    You can add these yourself if you want them differently.
- -->
-
-<%= f.label :name %>
-<%= f.text_field :name, placeholder: "artist" %>
-
-<%= f.submit %>
-<!-- by default creates the name Create Artist
-    by you can name it yourself via:
-    < % = f.submit "New Awesome Artist" % >
- -->
-
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: "artist" %>
+  <%= f.submit %>
 <% end %>
