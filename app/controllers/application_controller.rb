@@ -27,6 +27,14 @@ class ApplicationController < ActionController::Base
     current_user && current_user.admin?
   end
 
+  def assess_cart
+    session[:cart] ||= {}
+    id  = params[:add_item][:id].to_sym
+    qty = params[:add_item][:qty]
+    session[:cart][id] = qty
+    session[:cart][id] = nil if qty == 0
+  end
+
 
 
 end

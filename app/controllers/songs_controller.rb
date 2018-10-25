@@ -7,6 +7,8 @@ class SongsController < ApplicationController
   # Index in the routes folder actually refers to this method
   def index
     @songs = Song.all
+    assess_cart
+    redirect_to songs_path
   end
 
   def new
@@ -26,5 +28,6 @@ class SongsController < ApplicationController
   def song_params
     params.require(:song).permit(:title, :length, :play_count)
   end
+
 
 end
