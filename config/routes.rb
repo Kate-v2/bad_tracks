@@ -16,4 +16,7 @@ Rails.application.routes.draw do
     resources :categories, only: [:index]
   end
 
+  # --- Cart ---
+  resources :carts, only: [:create]
+
 end
