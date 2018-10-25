@@ -2,10 +2,6 @@
 class CartsController < ApplicationController
 
   def create
-
-    binding.pry
-
-
     song = Song.find(params[:song_id])
     # song = Song.find(params[:id])
     # song = Song.find(params[:song][:id])
