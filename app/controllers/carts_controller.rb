@@ -1,4 +1,7 @@
 class CartsController < ApplicationController
+  # this gives you access to view helpers in these files --- Try to put this in your tests to handle the to currency
+  include ActionView::Helpers::TextHelper
+
 
   def create
     song = Song.find(params[:song_id])
