@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
   end
 
   before_action :build_cart
+  # ^^^ thsese are called filters
+  # allows us to build code that runs all the time or after meeting certain criteria
 
   def build_cart
     @cart ||= Cart.new(session[:cart])
