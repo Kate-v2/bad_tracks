@@ -11,4 +11,12 @@ class ApplicationController < ActionController::Base
   def current_admin?
     current_user && current_user.admin?
   end
+
+  before_action :build_cart
+
+  def build_cart
+    @cart ||= Cart.new(session[:cart])
+  end
+
+
 end

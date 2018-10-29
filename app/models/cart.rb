@@ -1,12 +1,13 @@
 
 # PORO - Plain Old Ruby Object
 
-class Cart  
+class Cart
 
   attr_reader :contents
 
   def initialize(contents)
-    @contents = contents || Hash.new(0)
+    # @contents = contents || Hash.new(0)
+    @contents = contents
   end
 
   def total_count
